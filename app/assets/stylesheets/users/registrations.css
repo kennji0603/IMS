@@ -1,0 +1,94 @@
+.account-page .account-page__inner {
+  width: 700px;
+  margin: 60px auto;
+  padding: 60px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
+  float: left;
+  width: 50%;
+}
+.account-page .account-page__inner:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.account-page .account-page__header h2 {
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: 200;
+}
+.account-page .account-page__header h2:after {
+  content: "";
+  display: block;
+  width: 60px;
+  margin-top: 5px;
+  
+}
+.account-page .account-page__header h5 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.account-page .account-page__header .btn {
+  margin-top: 20px;
+  color: #fff;
+  background-color: #ccc;
+  font-size: 14px;
+}
+.account-page .field {
+  margin-bottom: 10px;
+}
+.account-page .field .field-label {
+  padding: 10px 0;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.account-page .field .field-label i {
+  font-size: 11px;
+}
+.account-page .field .field-input input {
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+.account-page .btn {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+}
+.account-page input[type=submit] {
+  float: left;
+  margin-top: 20px;
+  color: #fff;
+  background-color: red;
+}
+
+.form-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-text-wrap {
+  width: 100%;
+  height: 20%;
+}
+
+.indispensable {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+  padding: 3px;
+}
+
+
+

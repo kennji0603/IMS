@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        company_name: テナント名
+        phone_number: 電話番号

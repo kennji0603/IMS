@@ -9,9 +9,9 @@
             <ul class="navbar_nav">
              <% if user_signed_in? %>
               <li class="nav_item">
-                <%#<%= link_to users_mypage_path, class: "nav_link" do %>
-                <%#<i class="fas fa-user"></i><label>マイページ</label>
-                <%#<% end %>
+                <%= link_to users_mypage_path, class: "nav_link" do %>
+                <i class="fas fa-user"></i><label>マイページ</label>
+                <% end %>
               </li>
               <li class="nav_item">
                 <%#<%= link_to cart_path, class: "nav_link" do %>

@@ -14,9 +14,9 @@
                 <% end %>
               </li>
               <li class="nav_item">
-                <%#<%= link_to cart_path, class: "nav_link" do %>
-                <%#<i class="fas fa-shopping-cart"></i><label>カート</label>
-                <%#<% end %>
+                <%= link_to cart_path, class: "nav_link" do %>
+                <i class="fas fa-shopping-cart"></i><label>カート</label>
+                <% end %>
               </li>
              <li class="nav_item">
                 <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: "nav_link" %>

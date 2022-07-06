@@ -1,0 +1,47 @@
+<header class="header">
+  
+    <div class="header-contents">
+      <div class="header_logo">
+        <h1><a href="/">IMS</a></h1>
+        <p>~ItemsManagementSystem~</p>
+      </div>    
+          <div class="navbar">
+            <ul class="navbar_nav">
+             <% if user_signed_in? %>
+              <li class="nav_item">
+                <%#<%= link_to users_mypage_path, class: "nav_link" do %>
+                <%#<i class="fas fa-user"></i><label>マイページ</label>
+                <%#<% end %>
+              </li>
+              <li class="nav_item">
+                <%#<%= link_to cart_path, class: "nav_link" do %>
+                <%#<i class="fas fa-shopping-cart"></i><label>カート</label>
+                <%#<% end %>
+              </li>
+             <li class="nav_item">
+                <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: "nav_link" %>
+              </li> 
+             <% else %>
+              <li class="nav_item">
+                <%= link_to new_user_registration_path, class: "nav_link" do %>
+                  <label>新規登録</label>
+                <% end %>
+              </li>
+              <li class="nav_item">
+                <%= link_to new_user_session_path, class: "nav_link" do %>
+                  <label>ログイン</label>
+                <% end %>
+              </li>
+              <hr>
+              <li class="nav_item">
+                 <%= link_to new_user_session_path, class: "nav_link" do %><i class="far fa-heart"></i><% end %>
+              </li>
+              <li class="nav_item">
+                <%= link_to new_user_session_path, class: "nav_link" do %><i class="fas fa-shopping-cart"></i><% end %>
+              </li>
+             <% end %>
+            </ul>  
+          </div>
+    </div>     
+  
+</header>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IMS</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/8484570c7b.js" crossorigin="anonymous"></script>
+</head>
+
+  </head>
+
+  <body>
+  <%= render partial: 'shared/header' %>
+  <div class="row">
+    <div class="col-3 mt-3">
+      <%= render partial: 'layouts/dashboard/sidebar' %>
+    </div>
+      <div class="col">
+        <main class="py-4 mb-5">
+    <%= yield %>
+  </body>
+</html>

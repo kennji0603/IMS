@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'dashboard' to: 'dashboard#index'
+  resources :dashboard, only: :index
+  namespace :dashboard do
+    resources :items, except: [:show]
+  end
 
   devise_for :users
   root to: 'items#index'

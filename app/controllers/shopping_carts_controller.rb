@@ -15,8 +15,6 @@ class ShoppingCartsController < ApplicationController
     redirect_to cart_path
   end
  
-  def update
-  end
 
   def destroy
     @user_cart.buy_flag = true

@@ -1,6 +1,6 @@
 class Dashboard::ItemsController < ApplicationController
   before_action :authenticate_user!
-
+  layout "dashboard/dashboard"
   def index
     @items = Item.all
   end

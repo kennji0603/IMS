@@ -14,13 +14,16 @@
   </head>
 
   <body>
-  <%= render partial: 'shared/header' %>
-  <div class="row">
-    <div class="col-3 mt-3">
-      <%= render partial: 'layouts/dashboard/sidebar' %>
-    </div>
+  <%= render "shared/header" %>
+  <div class="row">  
+      <div class="col-3 mt-3">
+         <%= render partial: 'layouts/dashboard/sidebar' %>
+      </div>
       <div class="col">
         <main class="py-4 mb-5">
-    <%= yield %>
+          <%= yield %>
+        </main>
+      </div>
+    </div>
   </body>
 </html>

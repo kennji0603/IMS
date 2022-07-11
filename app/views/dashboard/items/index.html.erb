@@ -1,5 +1,7 @@
-<h1>商品管理</h1>
-<table class="table table-responsive mt-5">
+
+<div class="w-75 mt-2">   
+  <h1>商品管理</h1>
+  <table class="table table-responsive mt-5">
 
     <thead>
       <tr>
@@ -14,7 +16,7 @@
       <% @items.each do |item| %>
       <tr>
         <th scope="row"><%= item.id %></td>
-        <td><%= image_tag "/images/dummy.png", class: "img-fluid h-10" %></td>
+        <td><%= image_tag item.image, class: "h-10 img-fluid" %></td>
         <td><%= item.name %></td>
         <td><%= item.price %></td>
         
@@ -22,3 +24,4 @@
       <% end %>
     </tbody>
   </table>
+</div> 

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :dashboard, only: :index
   namespace :dashboard do
-    resources :items, except: [:show]
+    resources :items, except: :show
+    resources :users, only: :index 
   end
 
   devise_for :users

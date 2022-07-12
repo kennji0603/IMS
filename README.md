@@ -1,27 +1,39 @@
-# README
+## アプリケーション名
+  「IMS〜ItemsManagementSystem~」
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##  アプリケーション概要
+  一般ユーザーは什器レンタルの注文ができる、
+  管理者は什器の登録とレンタル履歴を確認できます。
 
-Things you may want to cover:
+## URL
+  https://ims-38055.herokuapp.com/
 
-* Ruby version
+## テスト用アカウント
+  一般ユーザー メールアドレス:test@test.com
+             password:09876p
+  管理者 メールアドレス:eva@test.com
+        password:12345q
 
-* System dependencies
+## 利用方法
+  ユーザー側:新規登録し、商品を選び、数量入力しカートに入れる。カート画面より注文画面へ遷移。
+            注文画面にてレンタル日数入力し注文確定。
+  管理者：ログイン後、ダッシュボード画面に遷移。商品一覧、商品登録、ユーザー一覧、注文履歴の確認ができる。        
 
-* Configuration
+## ユーザーストーリー
+  備品管理の自動化による業務生産性向上を図る
 
-* Database creation
+## 用件定義
+  ruby:2.6.5
+  rails:6.0.5
+  gem 'devise'
+  gem 'pry-rails'
+  gem 'rails-i18n'
+  gem 'acts_as_shopping_cart', '~> 0.4.1'
+  gem 'mini_magick'
+  gem 'image_processing', '~> 1.2
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 ## users テーブル
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
@@ -33,8 +45,8 @@ Things you may want to cover:
 
 ### Association
 
---has_one :shopping_cart
---has_many :rentals
+--has_one :shopping_cart  
+--has_many :orders
 
 
 ## items テーブル
@@ -47,12 +59,12 @@ Things you may want to cover:
 
 ### Association
 
---has_many :shopping_cart_items
---has_many :rental_details
+--has_many :shopping_cart_items 
+--has_many :rental_details  
 --has_many :stocks
 
 
-## rentals テーブル
+## orders テーブル
 
 | Column             | Type       | Options                       |
 | ------------------ | -----------| ----------------------------- |
@@ -61,21 +73,21 @@ Things you may want to cover:
 |
 ### Association
 
---belongs_to :user
---has_many :rental_details
---has_many :items, through: :rental_details
---has_many :rental_days
+--belongs_to :user  
+--has_many :rental_details  
+--has_many :items, through: :rental_details  
+--has_many :rental_days  
 
 ##  rental_daysテーブル
 
 | Column             | Type       | Options                        |
 | ------------------ | -----------| -------------------------------|
 | rental_day         | integer    | null: false                    |
-| rental_id          | integer    | null: false, foreign_key: true |
+| order_id           | integer    | null: false, foreign_key: true |
 
 ### Association
 
---belongs_to :rental
+--belongs_to :order  
 
 
 ## stocks テーブル
@@ -86,7 +98,7 @@ Things you may want to cover:
 
 ### Association
 
---belongs_to :item
+--belongs_to :item  
 
 ## users_admin テーブル
 | Column             | Type    | Options                   |
@@ -105,14 +117,14 @@ Things you may want to cover:
 | quantity             | integer    | null: false                    |
 
 ### Association
---belongs_to :shopping_cart
---belongs_to :item
+--belongs_to :shopping_cart  
+--belongs_to :item  
 
 # rental_details テーブル
 | Column      | Type       | Options                        |
 | ------------| ---------- | ------------------------------ |
 | item_id     | integer    | null: false, foreign_key: true |
-| rental_id   | integer    | null: false, foreign_key: true |
+| order_id   | integer    | null: false, foreign_key: true |
 | rental_count| integer    | null: false                    |
 
 ### Association

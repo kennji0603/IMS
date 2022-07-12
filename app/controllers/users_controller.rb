@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  def mypage
+  def show
     @user = current_user
   end
 end

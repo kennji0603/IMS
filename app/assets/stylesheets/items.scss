@@ -1,3 +1,62 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.main {
+  background: #f5f5f5;
+}
+
+.item-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.item-contents>.subtitle {
+  font-size: 5vh;
+  margin: 1vh 0;
+ 
+  color: black;
+  font-weight: bold;
+}
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.item-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+  list-style: none;
+
+}
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.item-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+  margin-top: 10px;
+}
+
+.item-name {
+  font-size: 2.5vh;
+}
+.item-price {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+

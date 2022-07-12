@@ -16,9 +16,11 @@
       <% @items.each do |item| %>
       <tr>
         <th scope="row"><%= item.id %></td>
-        <td><%= image_tag item.image, class: "h-10 img-fluid" %></td>
+        <div class="image">
+         <td><%= image_tag item.image, class: "img-fluid h-10" %></td>
+        </div>
         <td><%= item.name %></td>
-        <td><%= item.price %></td>
+        <td>¥<%= item.price %></td>
         
       </tr>
       <% end %>

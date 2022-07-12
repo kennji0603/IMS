@@ -3,5 +3,7 @@ class Dashboard::UsersController < ApplicationController
   layout  "dashboard/dashboard"
 
   def index
-    @users = User.all
+    @users = User.where(admin: 0)
+  end
+
 end

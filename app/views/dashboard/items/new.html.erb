@@ -4,10 +4,10 @@
 
     <hr>
 
-    <%= form_with model: @item, url: dashboard_items_path, local: true do |f| %>
+    <%= form_with model: @item, url: dashboard_items_path, id: 'new_post', local: true do |f| %>
       <div class="form-inline mt-4 mb-4 row">
          
-           
+          
            <%= f.file_field :image%>
          
       </div>

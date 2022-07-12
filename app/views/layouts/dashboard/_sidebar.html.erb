@@ -1,19 +1,19 @@
 <div class="container ml-3">
 
   <h2>商品管理</h2>
-  <div class="d-flex flex-column">
-    <label class="ims-sidebar-category-label">
-      <%= link_to "商品一覧", dashboard_items_path %>
+  <div class="d-flex flex-column mt-2 mb-3">
+    <label class="ims-sidebar-category-label mt-1">
+      <%= link_to "商品一覧", dashboard_items_path, class: 'contents' %>
     </label>
-    <label class="ims-sidebar-category-label">
-      <%= link_to "商品登録", new_dashboard_item_path %>
+    <label class="ims-sidebar-category-label mt-1">
+      <%= link_to "商品登録", new_dashboard_item_path, class: 'contents' %>
     </label>
   </div>
 
   <h2>テナント管理</h2>
   <div class="d-flex flex-column">
-    <label class="ims-sidebar-category-label">
-      <%= link_to "テナント一覧", dashboard_users_path %>
+    <label class="ims-sidebar-category-label mt-1">
+      <%= link_to "テナント一覧", dashboard_users_path, class: 'contents' %>
     </label>
   </div>
 

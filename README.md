@@ -23,14 +23,14 @@
   備品管理の自動化による業務生産性向上を図る
 
 ## 用件定義
-  ruby:2.6.5
-  rails:6.0.5
-  gem 'devise'
-  gem 'pry-rails'
-  gem 'rails-i18n'
-  gem 'acts_as_shopping_cart', '~> 0.4.1'
-  gem 'mini_magick'
-  gem 'image_processing', '~> 1.2
+  ruby:2.6.5  
+  rails:6.0.5  
+  gem 'devise'  
+  gem 'pry-rails'  
+  gem 'rails-i18n'  
+  gem 'acts_as_shopping_cart', '~> 0.4.1'  
+  gem 'mini_magick'  
+  gem 'image_processing', '~> 1.2  
 
 
 

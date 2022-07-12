@@ -28,10 +28,8 @@
   gem 'devise'  
   gem 'pry-rails'  
   gem 'rails-i18n'  
-  gem 'acts_as_shopping_cart', '~> 0.4.1'  
-  gem 'mini_magick'  
-  gem 'image_processing', '~> 1.2  
-
+  gem 'acts_as_shopping_cart'  
+  
 
 
 ## users テーブル

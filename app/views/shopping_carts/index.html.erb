@@ -49,10 +49,12 @@
         
       </div>
     </div>
-    <%= form_with url: cart_path , method: :delete, class: "d-flex justify-content-end mt-3" do |f| %>
+    <div class= "d-flex justify-content-end mt-3">
       <%= link_to "レンタルを続ける", items_path, class: "btn ics-favorite-button border-dark text-dark mr-3" %>
-      <%= f.submit "レンタルを確定する", class: "btn ics-submit-button btn-warning text-dark" %>
-    <% end %>
+      <% if @user_cart_items.present?%>
+       <%= link_to "レンタルを確定する", cart_users_path, method: :delete,class: "btn ics-submit-button btn-warning text-dark" %>
+      <%end%>
+    </div>
   </div>
 </div>
 

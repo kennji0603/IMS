@@ -1,3 +1,30 @@
-// Place all the styles related to the shopping_carts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.ics-favorite-button {
+  margin-right: 30px;
+}
+
+.contents {
+  width: 100vw;
+  padding: 50px 0 50px 0;
+  display: flex;
+
+}
+
+.content {
+ margin: 0 auto;
+ border:1px solid gainsboro;
+ padding: 40px;
+ border-radius: 2px;
+ display: flex;
+ flex-direction: column;
+}
+
+.content h3 {
+  font-size: 40px;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+
+}

@@ -2,8 +2,13 @@
   
     <div class="header-contents">
       <div class="header_logo">
-        <h1><a href="/">IMS</a></h1>
+        <% if user_signed_in? && current_user.admin%>
+        <h1><%= link_to 'IMS', dashboard_index_path, class: "logo"%></h1>
         <p>~ItemsManagementSystem~</p>
+        <%else%>
+        <h1><%= link_to 'IMS', root_path, class: "logo"%></h1>
+        <p>~ItemsManagementSystem~</p>
+        <%end%>
       </div>    
           <div class="navbar">
             <ul class="navbar_nav">
@@ -19,7 +24,7 @@
                 <% end %>
               </li>
               <li class="nav_item">
-                <%= link_to cart_path, class: "nav_link" do %>
+                <%= link_to cart_users_path, class: "nav_link" do %>
                 <i class="fas fa-shopping-cart"></i><label>カート</label>
                 <% end %>
               </li>

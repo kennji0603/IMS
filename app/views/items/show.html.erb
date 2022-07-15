@@ -20,7 +20,7 @@
         </div>
 
         <% if user_signed_in? %>
-          <%= form_with url: cart_create_path, local: true do |f| %>
+          <%= form_with url: cart_create_users_path, local: true do |f| %>
             <%= f.hidden_field :item_id, value: @item.id %>
             <%= f.hidden_field :name, value: @item.name %>
             <%= f.hidden_field :price, value: @item.price %>

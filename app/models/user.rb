@@ -12,4 +12,5 @@ class User < ApplicationRecord
          validates :password, :password_confirmation,
             format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'は、半角英数字で入力してください' }
          has_many :shopping_carts
+         has_many :orders
 end

@@ -40,6 +40,12 @@ ActiveRecord::Schema.define(version: 2022_07_09_121929) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  
+
+ 
+
+  
+
   create_table "shopping_cart_items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "owner_id"
     t.string "owner_type"
@@ -76,5 +82,6 @@ ActiveRecord::Schema.define(version: 2022_07_09_121929) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  
   add_foreign_key "shopping_carts", "users"
 end
